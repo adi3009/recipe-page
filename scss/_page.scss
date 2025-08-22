@@ -1,0 +1,38 @@
+@use "typography" as *;
+@use "colors" as c;
+@use "spacing" as s;
+
+body {
+  @extend %text-preset-4;
+  color: c.$stone600;
+}
+
+.hero {
+  width: 100%;
+}
+
+.bold {
+  @extend %text-preset-4-bold;
+}
+
+.section {
+  .title {
+    @extend %text-preset-2;
+    color: c.$brown800;
+  }
+
+  &.intro {
+    .title {
+      @extend %text-preset-1;
+      color: c.$stone900;
+    }
+  }
+
+  &.prep-time {
+    background-color: c.$rose50;
+    .title {
+      @extend %text-preset-3;
+      color: c.$rose800;
+    }
+  }
+}

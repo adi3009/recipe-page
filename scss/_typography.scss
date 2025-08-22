@@ -1,0 +1,56 @@
+$fontSize16: 1rem;
+$fontSize40: 2.5rem;
+$fontSize28: 1.75rem;
+$fontSize20: 1.25rem;
+$fontWeight400: 400;
+$fontWeight600: 600;
+$fontWeight700: 700;
+
+@font-face {
+  font-family: 'outfit';
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: 'young-serif';
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+@mixin text-preset(
+  $family: 'outfit',
+  $size: $fontSize16,
+  $lineHeight: 150%,
+  $fontWeight: $fontWeight400,
+  $letterSpacing: 0
+) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+}
+
+%text-preset-1 {
+  @include text-preset('young-serif', $fontSize40, 100%);
+}
+
+%text-preset-2 {
+  @include text-preset('young-serif', $fontSize28, 100%);
+}
+
+%text-preset-3 {
+  @include text-preset($size: $fontSize20, $lineHeight: 100%, $fontWeight: $fontWeight600);
+}
+
+%text-preset-4 {
+  @include text-preset;
+}
+
+%text-preset-4-bold {
+  @include text-preset($fontWeight: $fontWeight700);
+}
