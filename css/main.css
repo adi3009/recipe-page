@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* https://piccalil.li/blog/a-more-modern-css-reset/ */
 /* Box sizing rules */
 *,
@@ -167,6 +168,30 @@ main {
 }
 .section .nutrition-table {
   margin-block-start: 1.5em;
+}
+
+ul, ol {
+  padding: unset;
+  margin: unset;
+}
+
+li {
+  margin-inline-start: 1.5em;
+  padding-inline-start: 1em;
+}
+
+li + li {
+  margin-block-start: 0.5em;
+}
+
+li::marker {
+  color: hsl(14, 45%, 36%);
+  content: "•";
+  font-weight: 700;
+}
+
+ol li::marker {
+  content: counter(list-item) ".";
 }
 
 /*# sourceMappingURL=main.css.map */

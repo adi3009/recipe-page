@@ -60,3 +60,27 @@ main {
     margin-block-start: s.$space300;
   }
 }
+
+ul,ol {
+  padding: unset;
+  margin: unset;
+}
+
+li {
+  margin-inline-start: s.$space300;
+  padding-inline-start: s.$space200; // padding for adding gap after the marker
+}
+
+li + li {
+  margin-block-start: s.$space100;
+}
+
+li::marker { // control the marker style
+  color: c.$brown800;
+  content: '\2022'; // custom marker for controlling the gap between the list marker and the list item
+  font-weight: $fontWeight700;
+}
+
+ol li::marker {
+  content: counter(list-item)'.';
+}
