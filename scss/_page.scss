@@ -5,34 +5,58 @@
 body {
   @extend %text-preset-4;
   color: c.$stone600;
+  margin: unset;
 }
 
-.hero {
-  width: 100%;
+hr {
+  border: 1px solid c.$stone150;
+  margin-block-start: unset;
+  margin-block-end: s.$space400 - 0.0625;
 }
 
 .bold {
   @extend %text-preset-4-bold;
 }
 
+main {
+  padding-block: s.$space500;
+  padding-inline: s.$space400;
+}
+
 .section {
+  margin-block-end: s.$space400;
   .title {
     @extend %text-preset-2;
     color: c.$brown800;
   }
 
+  .content {
+    margin-block-start: s.$space300;
+  }
+
   &.intro {
     .title {
-      @extend %text-preset-1;
+      @extend %text-preset-1-mobile;
       color: c.$stone900;
     }
   }
 
   &.prep-time {
     background-color: c.$rose50;
+    border-radius: 12px;
+    padding: s.$space300;
+
     .title {
       @extend %text-preset-3;
       color: c.$rose800;
     }
+
+    .content {
+      margin-block-start: s.$space200;
+    }
+  }
+
+  .nutrition-table {
+    margin-block-start: s.$space300;
   }
 }
