@@ -80,8 +80,13 @@ ul,ol {
   margin: unset;
 }
 
-li {
-  margin-inline-start: s.$space300;
+ul li {
+  margin-inline-start: s.$space100;
+  padding-inline-start: s.$space200; // padding for adding gap after the marker
+}
+
+ol li {
+  margin-inline-start: s.$space150;
   padding-inline-start: s.$space200; // padding for adding gap after the marker
 }
 

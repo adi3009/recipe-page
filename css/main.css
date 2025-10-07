@@ -193,8 +193,13 @@ ul, ol {
   margin: unset;
 }
 
-li {
-  margin-inline-start: 1.5em;
+ul li {
+  margin-inline-start: 0.5em;
+  padding-inline-start: 1em;
+}
+
+ol li {
+  margin-inline-start: 1.33em;
   padding-inline-start: 1em;
 }
 
