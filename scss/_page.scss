@@ -18,6 +18,10 @@ hr {
   @extend %text-preset-4-bold;
 }
 
+.color-brown {
+  color: c.$brown800;
+}
+
 main {
   padding-block: s.$space500;
   padding-inline: s.$space400;
@@ -83,4 +87,32 @@ li::marker { // control the marker style
 
 ol li::marker {
   content: counter(list-item)'.';
+}
+
+.nutrition-table {
+  border-collapse: collapse;
+  width: 100%;
+
+  td {
+    border-bottom: 1px solid c.$stone150;
+    padding-block: s.$space100;
+    text-align: left;
+  }
+
+  td:first-child {
+    padding-inline-start: s.$space400;
+  }
+
+  td:last-child {
+    padding-inline-end: s.$space400;
+  }
+
+  tr:first-child td {
+    padding-block-start: unset;
+  }
+
+  tr:last-child td {
+    padding-block-end: unset;
+    border-bottom: unset;
+  }
 }

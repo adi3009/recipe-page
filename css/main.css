@@ -138,6 +138,10 @@ hr {
   margin-block-end: 1.9375em;
 }
 
+.color-brown {
+  color: hsl(14, 45%, 36%);
+}
+
 main {
   padding-block: 2.5em;
   padding-inline: 2em;
@@ -192,6 +196,29 @@ li::marker {
 
 ol li::marker {
   content: counter(list-item) ".";
+}
+
+.nutrition-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.nutrition-table td {
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+  padding-block: 0.5em;
+  text-align: left;
+}
+.nutrition-table td:first-child {
+  padding-inline-start: 2em;
+}
+.nutrition-table td:last-child {
+  padding-inline-end: 2em;
+}
+.nutrition-table tr:first-child td {
+  padding-block-start: unset;
+}
+.nutrition-table tr:last-child td {
+  padding-block-end: unset;
+  border-bottom: unset;
 }
 
 /*# sourceMappingURL=main.css.map */
