@@ -22,9 +22,18 @@ hr {
   color: c.$brown800;
 }
 
-main {
+header {
+  margin-block-end: s.$space500;
+}
+
+.card {
+  margin-inline: auto;
   padding-block: s.$space500;
   padding-inline: s.$space400;
+
+  header {
+    display: none;
+  }
 }
 
 .section {

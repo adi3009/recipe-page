@@ -1,0 +1,43 @@
+@use "typography" as *;
+@use "colors" as c;
+@use "spacing" as s;
+
+@media (min-width: 768px) {
+  body {
+    background-color: c.$stone100;
+    padding-inline: s.$space600;
+    padding-block: s.$space1600;
+  }
+
+  header.mobile {
+    display: none;
+  }
+
+  .card {
+    background-color: c.$white;
+    border-radius: s.$space300;
+    max-width: 616px;
+    padding: s.$space500;
+
+    header {
+      display: block;
+    }
+
+    .hero {
+      border-radius: s.$space300;
+    }
+  }
+
+  .section {
+    &.intro {
+      .title {
+        /**
+        can not extend selectors across media queries, hence including a mixin
+        https://stackoverflow.com/questions/14840918/extending-selectors-from-within-media-queries-with-sass
+        e.g. @extend %test-preset-1 will not work
+         */
+        @include text-preset-1;
+      }
+    }
+  }
+}

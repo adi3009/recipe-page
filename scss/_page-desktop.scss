@@ -1,0 +1,10 @@
+@use "typography" as *;
+@use "colors" as c;
+@use "spacing" as s;
+
+@media (min-width: 1440px) {
+
+  .card {
+    max-width: 736px;
+  }
+}

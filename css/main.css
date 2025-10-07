@@ -87,6 +87,11 @@ textarea:not([rows]) {
   font-display: swap;
   src: url("../assets/fonts/young-serif/YoungSerif-Regular.ttf");
 }
+/**
+can not extend preset across media queries, hence creating a mixin
+
+https://stackoverflow.com/questions/14840918/extending-selectors-from-within-media-queries-with-sass
+*/
 .section .title {
   font-family: "young-serif";
   font-size: 1.75rem;
@@ -142,9 +147,17 @@ hr {
   color: hsl(14, 45%, 36%);
 }
 
-main {
+header {
+  margin-block-end: 2.5em;
+}
+
+.card {
+  margin-inline: auto;
   padding-block: 2.5em;
   padding-inline: 2em;
+}
+.card header {
+  display: none;
 }
 
 .section {
@@ -220,6 +233,162 @@ ol li::marker {
 .nutrition-table tr:last-child td {
   padding-block-end: unset;
   border-bottom: unset;
+}
+
+@font-face {
+  font-family: "outfit";
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "young-serif";
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+/**
+can not extend preset across media queries, hence creating a mixin
+
+https://stackoverflow.com/questions/14840918/extending-selectors-from-within-media-queries-with-sass
+*/
+.section .title {
+  font-family: "young-serif";
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.section.prep-time .title {
+  font-family: "outfit";
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+body {
+  font-family: "outfit";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.bold {
+  font-family: "outfit";
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.section.intro .title {
+  font-family: "young-serif";
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: hsl(30, 54%, 90%);
+    padding-inline: 3em;
+    padding-block: 8em;
+  }
+  header.mobile {
+    display: none;
+  }
+  .card {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1.5em;
+    max-width: 616px;
+    padding: 2.5em;
+  }
+  .card header {
+    display: block;
+  }
+  .card .hero {
+    border-radius: 1.5em;
+  }
+  .section.intro .title {
+    /**
+    can not extend selectors across media queries, hence including a mixin
+    https://stackoverflow.com/questions/14840918/extending-selectors-from-within-media-queries-with-sass
+    e.g. @extend %test-preset-1 will not work
+     */
+    font-family: "young-serif";
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+}
+@font-face {
+  font-family: "outfit";
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "young-serif";
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+/**
+can not extend preset across media queries, hence creating a mixin
+
+https://stackoverflow.com/questions/14840918/extending-selectors-from-within-media-queries-with-sass
+*/
+.section .title {
+  font-family: "young-serif";
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.section.prep-time .title {
+  font-family: "outfit";
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+body {
+  font-family: "outfit";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.bold {
+  font-family: "outfit";
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.section.intro .title {
+  font-family: "young-serif";
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+@media (min-width: 1440px) {
+  .card {
+    max-width: 736px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

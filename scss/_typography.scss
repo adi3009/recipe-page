@@ -36,8 +36,17 @@ $fontWeight700: 700;
   letter-spacing: $letterSpacing;
 }
 
-%text-preset-1 {
+/**
+can not extend preset across media queries, hence creating a mixin
+
+https://stackoverflow.com/questions/14840918/extending-selectors-from-within-media-queries-with-sass
+*/
+@mixin text-preset-1 {
   @include text-preset('young-serif', $fontSize40, 100%);
+}
+
+%text-preset-1 {
+  @include text-preset-1;
 }
 
 %text-preset-2 {
