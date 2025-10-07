@@ -158,6 +158,7 @@ main {
 }
 .section.intro .title {
   color: hsl(24, 5%, 18%);
+  text-wrap: initial;
 }
 .section.prep-time {
   background-color: hsl(330, 100%, 98%);

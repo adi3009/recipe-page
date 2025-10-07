@@ -42,6 +42,7 @@ main {
     .title {
       @extend %text-preset-1-mobile;
       color: c.$stone900;
+      text-wrap: initial;
     }
   }
 
