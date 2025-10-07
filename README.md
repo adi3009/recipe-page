@@ -15,7 +15,10 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 - Learning to use sass.
 - Learned the table border-collapse property. Styling the table was a challenge.
 
+### Site Link - https://adi3009.github.io/recipe-page/
+
 ### Reference
 
-https://web.dev/creative-list-styling/
-https://css-tricks.com/everything-you-need-to-know-about-the-gap-after-the-list-marker/
+- https://web.dev/creative-list-styling/
+
+- https://css-tricks.com/everything-you-need-to-know-about-the-gap-after-the-list-marker/
